@@ -63,7 +63,11 @@ client.getEntry('6Vh2VJAwk3d67sxUO0aqJu')
 </div> */}
 
 
-const createCard = (title,url,bigUrl, mask, pageUrl)=>{
+
+// a function that takes a title, url, bigUrl, mask and pageUrl and
+// creates a card and puts it into the target div
+
+const createCard = (title,url,bigUrl, mask, pageUrl, target)=>{
 
     const iItem = document.createElement('i');
     iItem.classList.add('bx','bx-link');
@@ -115,28 +119,44 @@ const createCard = (title,url,bigUrl, mask, pageUrl)=>{
     console.log('creating main element')
     const cardDiv = document.createElement('div');
 
+
+    // add the title div
+    const titleDiv = document.createElement('div');
+    // add class to the title element
+    titleDiv.classList.add('titleDiv');
+    titleDiv.innerHTML += `${title}`;
+
+
+
     // add classes
 
     // filter mask
     let filterClass = `filter-${mask}`
     cardDiv.classList.add('col-lg-4','col-md-6','portfolio-item',filterClass)
     cardDiv.appendChild(wrapperDiv);
+    cardDiv.appendChild(titleDiv);
 
     // locate the target
-    let targetDiv = document.getElementById('portfolioTarget');
+    let targetDiv = document.getElementById(target);
     targetDiv.appendChild(cardDiv);
 
 }
 
 
-// get all the projects types
+// get all the projects types for architecture
 client.getEntries({
     'content_type': 'project'
   })
   .then(function (entries) {
-    console.log(JSON.stringify(entries.items[0]))
+    // console.log(JSON.stringify(entries.items[0]))
     entries.items.forEach(function (entry){
         // create a new div for each project and append it
+
+        // but only if it's architecture
+
+        if(entry.fields.architecture){
+           
+      
 
         let pageUrl = `/project/${entry.fields.slug}.html`
 
@@ -146,15 +166,52 @@ client.getEntries({
             mask = entry.fields.category
         }        
 
-        console.log(JSON.stringify(entry))
+        //console.log(JSON.stringify(entry))
         
         createCard(
             entry.fields.title,
             `${entry.fields.cover.fields.file.url}?w=400&h=300`,
             `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
             mask,
-            pageUrl
+            pageUrl,
+            'architectureTarget'
             );
+
+        }
+      })
+  })
+
+
+// get all the projects types for architecture
+client.getEntries({
+    'content_type': 'project'
+  })
+  .then(function (entries) {
+    /// console.log(JSON.stringify(entries.items[0]))
+    entries.items.forEach(function (entry){
+        // create a new div for each project and append it
+
+        // but only if it's architecture
+
+        if(!entry.fields.architecture){        
+          let pageUrl = `/project/${entry.fields.slug}.html`
+          let mask
+
+          if(entry.fields.category){
+            mask = entry.fields.category}        
+
+        // console.log(JSON.stringify(entry))
+        
+        createCard(
+            entry.fields.title,
+            `${entry.fields.cover.fields.file.url}?w=400&h=300`,
+            `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
+            mask,
+            pageUrl,
+            'otherTarget'
+            );
+
+        }
       })
   })
 
@@ -164,21 +221,19 @@ client.getEntries({
     'content_type': 'exhibition'
   })
   .then(function (entries) {
-    console.log(JSON.stringify(entries.items[0]))
+    // console.log(JSON.stringify(entries.items[0]))
     entries.items.forEach(function (entry){
         // create a new div for each project and append it
 
         let pageUrl = `/painting/${entry.fields.slug}.html`
-
-
-        console.log(pageUrl)
         
         createCard(
             entry.fields.title,
             `${entry.fields.cover.fields.file.url}?w=400&h=300`,
             `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
             'slikarstvo',
-            pageUrl
+            pageUrl,
+            'paintingTarget'
             );
       })
   })
