@@ -67,7 +67,7 @@ client.getEntry('6Vh2VJAwk3d67sxUO0aqJu')
 // a function that takes a title, url, bigUrl, mask and pageUrl and
 // creates a card and puts it into the target div
 
-const createCard = (title,url,bigUrl, mask, pageUrl, target)=>{
+const createCard = (title,url,bigUrl, mask, pageUrl, target,year)=>{
 
     const iItem = document.createElement('i');
     iItem.classList.add('bx','bx-link');
@@ -124,7 +124,7 @@ const createCard = (title,url,bigUrl, mask, pageUrl, target)=>{
     const titleDiv = document.createElement('div');
     // add class to the title element
     titleDiv.classList.add('titleDiv');
-    titleDiv.innerHTML += `${title}`;
+    titleDiv.innerHTML += `${title}, ${year}`;
 
 
 
@@ -174,7 +174,8 @@ client.getEntries({
             `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
             mask,
             pageUrl,
-            'architectureTarget'
+            'architectureTarget',
+            entry.fields.year
             );
 
         }
@@ -208,7 +209,8 @@ client.getEntries({
             `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
             mask,
             pageUrl,
-            'otherTarget'
+            'otherTarget',
+            entry.fields.year
             );
 
         }
@@ -233,7 +235,8 @@ client.getEntries({
             `${entry.fields.cover.fields.file.url}?fm=jpg&fl=progressive`,
             'slikarstvo',
             pageUrl,
-            'paintingTarget'
+            'paintingTarget',
+            entry.fields.year
             );
       })
   })

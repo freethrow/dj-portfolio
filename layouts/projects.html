@@ -9,10 +9,10 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>{{ data.fields.title  }}</h2>
+          <h2>{{ data.fields.title }}</h2>
           <ol>
             <li><a href="/">Početna</a></li>
-            <li>Slikarstvo</li>
+            <li>Arhitektura</li>
           </ol>
         </div>
 
@@ -24,21 +24,21 @@
   <div class="container">
 
     <div class="section-title">
-      <h2>Slikarstvo</h2>
+      <h2>Arhitektura</h2>
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
           {{#each data.entries}}
+            {{#if fields.architecture}}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
               <img src="{{ fields.cover.fields.file.url }}" class="img-fluid" alt="">
               <div class="portfolio-links">
-                <a href="{{ fields.cover.fields.file.url }}" data-gall="portfolioGallery" class="venobox" title="{{ fields.title }}"><i class="bx bx-plus"></i></a>
-                <a href="/painting/{{ fields.slug }}.html" title="galerija"><i class="bx bx-link"></i></a>
-                
+                <a href="{{ fields.cover.fields.file.url }}" data-gall="portfolioGallery" class="venobox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="/project/{{ fields.slug}}.html" title="detalji"><i class="bx bx-link"></i></a>                
               </div>              
             </div>
             <div class="titleDiv">{{ fields.title }}</div>
           </div>
+          {{/if}}
           {{/each}}
 
         </div>
