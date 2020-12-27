@@ -12,7 +12,7 @@
           <h2>{{ data.fields.title  }}</h2>
           <ol>
             <li><a href="/">Početna</a></li>
-            <li>Slikarstvo</li>
+            <li><a href="/painting.html">Slikarstvo</a></li>
           </ol>
         </div>
 
@@ -37,15 +37,16 @@
       
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
-          <img src="{{ fields.image.fields.file.url }}?w=400&h=300" loading="lazy" class="img-fluid" alt="">
-          <div class="portfolio-links">
-            <a href="{{ fields.image.fields.file.url }}" 
-              data-gall="portfolioGallery" 
-              class="venobox" 
+          <a href="{{ fields.image.fields.file.url }}" 
+            data-lightbox="gallery" data-title="{{ fields.image.fields.title }}"
               title="{{ fields.image.fields.title }}">
-                <i class="bx bx-plus"></i>
-              </a>
-           </div>
+          <img src="{{ fields.image.fields.file.url }}?w=400&h=300" loading="lazy" class="img-fluid lightbox" alt="">
+          </a>      
+          
+        </div>
+        <div class="titleDiv">
+          <span class="title">{{ fields.title }}</span>
+          {{#if fields.dimensions}}<br/><span class="dimensions">{{ fields.dimensions }}</span>{{/if}}
         </div>
       </div>
       {{/each }}

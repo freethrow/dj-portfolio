@@ -30,14 +30,12 @@
           {{#each data.entries}}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="{{ fields.cover.fields.file.url }}" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="{{ fields.cover.fields.file.url }}" data-gall="portfolioGallery" class="venobox" title="{{ fields.title }}"><i class="bx bx-plus"></i></a>
-                <a href="/painting/{{ fields.slug }}.html" title="galerija"><i class="bx bx-link"></i></a>
-                
-              </div>              
+              <a href="/painting/{{ fields.slug }}.html" title="galerija">
+              <img src="{{ fields.cover.fields.file.url }}" class="img-fluid lightbox" alt="">
+              </a>                
+                       
             </div>
-            <div class="titleDiv">{{ fields.title }}</div>
+            <div class="titleDiv">{{ fields.title }}, {{ fields.year }}</div>
           </div>
           {{/each}}
 

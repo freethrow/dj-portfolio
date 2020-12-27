@@ -1087,6 +1087,19 @@ section {
   color: #eaebf0;
 }
 
+img.lightbox{
+  border:3px solid #eee;
+  height:100%;
+  transition: all 1s;
+
+}
+
+img.lightbox:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+
+}
+
 @media (max-width: 1199px) {
   #footer {
     position: static;
@@ -1111,4 +1124,19 @@ section {
 
 #paintingTarget, #architectureTarget, #otherTarget{
   min-height:400px;
+}
+
+.titleDiv{
+  text-align: center;
+  color: #777;
+  padding:1rem 0;
+}
+
+.titleDiv>.title{
+  color:#333;
+}
+
+.titleDiv>.dimensions{
+  font-size: 0.8rem;
+}
 }

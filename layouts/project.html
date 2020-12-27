@@ -39,15 +39,11 @@
      
       <div class="col-lg-4 col-md-6 portfolio-item filter-app">
         <div class="portfolio-wrap">
-          <img src={{ fields.file.url }} class="img-fluid" alt="">
-          <div class="portfolio-links">
-            <a href="{{ fields.file.url }}" 
-              data-gall="portfolioGallery" 
-              class="venobox" 
+           <a href="{{ fields.file.url }}" 
+            data-lightbox="gallery" data-title="{{ fields.title }}"
               title="{{ fields.title }}">
-                <i class="bx bx-plus"></i>
-              </a>
-           </div>
+          <img src="{{ fields.file.url }}?w=400&h=300" loading="lazy" class="img-fluid lightbox" alt="">
+          </a>
         </div>
       </div>
       {{/each }}
