@@ -7,18 +7,14 @@ const markdown = require('metalsmith-markdown')
 const dataMarkdown = require('metalsmith-data-markdown')
 const contentful = require('contentful-metalsmith')
 const handlebars = require('handlebars')
+const marked = require('marked')
 
 // add custom helpers to handlebars
 // https://github.com/superwolff/metalsmith-layouts/issues/63
 //
 // using the global handlebars instance
-glob.sync('helpers/*.js').forEach((fileName) => {
-  const helper = fileName.split('/').pop().replace('.js', '')
-
-  handlebars.registerHelper(
-    helper,
-    require(`./${fileName}`)
-  )
+handlebars.registerHelper('marked', function (text) {
+  return marked(text);
 })
 
 Metalsmith(__dirname)

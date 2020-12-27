@@ -12,7 +12,7 @@
           <h2>{{ data.fields.title }}</h2>
           <ol>
             <li><a href="/">Početna</a></li>
-            <li>Arhitektura</li>
+            <li>Ostali projekti</li>
           </ol>
         </div>
 
@@ -24,10 +24,10 @@
   <div class="container">
 
     <div class="section-title">
-      <h2>Arhitektura</h2>
+      <h2>Ostali projekti</h2>
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
           {{#each data.entries}}
-            {{#if fields.architecture}}
+            {{#unless fields.architecture}}
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
 
@@ -42,7 +42,7 @@
             </div>
          
         
-          {{/if}}
+          {{/unless}}
           {{/each}}
 
         </div>

@@ -146,10 +146,7 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
-    $(document).ready(function() {
-      $('.venobox').venobox();
-    });
+
   });
 
   // Testimonials carousel (uses the Owl Carousel library)
