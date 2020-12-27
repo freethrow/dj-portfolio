@@ -1139,4 +1139,24 @@ img.lightbox:hover{
 .titleDiv>.dimensions{
   font-size: 0.8rem;
 }
+
+
+
+@media (min-width: 1199px) {
+  .signature{
+
+    transform: translateX(150px);
+      }
+  
+}
+
+@media (max-width: 800px) {
+  .signature{
+ 
+    max-width:500px;
+      }
+  
+}
+.signature{
+  
 }
