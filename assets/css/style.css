@@ -1079,6 +1079,7 @@ section {
   width: 300px;
   z-index: 9999;
   background: #040b14;
+  padding-bottom: 2rem;
 }
 
 #footer .copyright {
@@ -1087,9 +1088,10 @@ section {
 
 #footer .credits {
   padding-top: 5px;
-  text-align: center;
+  text-align: left;
   font-size: 13px;
   color: #eaebf0;
+  border-top: 1px solid #666;
 }
 
 img.lightbox{
