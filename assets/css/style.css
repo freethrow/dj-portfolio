@@ -1148,12 +1148,23 @@ img.lightbox:hover{
   font-size: 0.8rem;
 }
 
+.hero-container{
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.signature{
+  
+  margin:0 auto;
+
+}
 
 @media (min-width: 1199px) {
   .signature{
 
-    transform: translateX(150px);
+    /*transform: translateX(150px);*/
       }
   
 }
@@ -1161,7 +1172,7 @@ img.lightbox:hover{
 @media (max-width: 800px) {
   .signature{
  
-    max-width:500px;
+    max-width:80%;
       }
   
 }
