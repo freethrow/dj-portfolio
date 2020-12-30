@@ -1112,7 +1112,7 @@ img.lightbox{
 }
 
 img.lightbox:hover{
-  opacity: 0.8;  
+  opacity: 0.7;  
 
 }
 
@@ -1205,4 +1205,47 @@ img.lightbox:hover{
 
 .profileImg img{
   margin-top: 2rem;
+}
+
+.section-title p, ul, li{
+  color: #666;
+  font-weight: 200;
+}
+
+.section-title p{
+  margin:1rem 0;
+}
+
+
+#contact-data{
+  background-color:#000;
+  opacity: 0.8;
+  padding:2rem;
+  border-radius: 0.5rem;
+  min-width: 40vw;
+  min-height: 40vh;
+}
+
+#contact-data .inner{
+  
+  color:#fff;
+  font-weight: 200;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+}
+
+#contact-data .inner dt{
+  border-bottom: 1px solid #444;
+}
+
+#contact-data .inner h3{
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+
+#resume{
+  color: #666;
+  font-weight: 200;
 }
