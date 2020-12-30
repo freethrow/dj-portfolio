@@ -35,7 +35,10 @@
               </a>                
                        
             </div>
-            <div class="titleDiv">{{ fields.title }}, {{ fields.year }}</div>
+            <div class="titleDiv"><a href="/painting/{{ fields.slug }}.html" title="galerija">
+              Izložba <strong>{{ fields.title }}</strong>, {{ fields.year }}</a>
+            </div>
+            
           </div>
           {{/each}}
 
