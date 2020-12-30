@@ -1249,3 +1249,9 @@ img.lightbox:hover{
   color: #666;
   font-weight: 200;
 }
+
+
+.lb-image{
+  border: 0 !important;
+
+}
