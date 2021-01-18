@@ -23,7 +23,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -443,11 +443,11 @@ section {
 }
 
 .resume .resume-title {
-  font-size: 26px;
+  font-size: 24px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #7d899b;
+  color: #173B6C;
 }
 
 .resume .resume-item {
@@ -1147,6 +1147,7 @@ img.lightbox:hover{
   text-align: center;
   color: #777;
   padding:0;
+  font-size: 0.8rem;
 }
 
 .titleDiv>.title{
@@ -1155,7 +1156,8 @@ img.lightbox:hover{
 }
 
 .titleDiv>.dimensions{
-  font-size: 0.8rem;
+  color:#333;
+  padding: 0;
   margin-top:-4px;
   
 }
@@ -1223,20 +1225,27 @@ img.lightbox:hover{
 
 
 #contact-data{
-  background-color:#000;
-  opacity: 0.8;
+  background-color:#969A98;;  
   padding:2rem;
   border-radius: 0.5rem;
   min-width: 40vw;
   min-height: 40vh;
+  z-index: 20;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 0.8;
+
 }
 
 #contact-data .inner{
-  
-  color:#fff;
+  position: absolute;
+  color:blue;
   font-weight: 200;
   font-family: "Open Sans", sans-serif;
-  font-weight: 200;
+  
+  z-index: 3000;
 }
 
 #contact-data .inner dt{
@@ -1268,4 +1277,60 @@ img.lightbox:hover{
   margin-top: 0px;  
 }
 
+.reduce{
+  font-size: 1rem;
+  border:5px solid red;
+}
 
+h4.page-title{
+  font-size: 1.2rem;
+  padding:0;
+
+}
+h5.page-title{
+  font-size: 1rem;
+  padding:0;
+  color:#999;
+  font-weight: 300;
+
+}
+
+h2.main-title{
+  font-size: 1.5rem;
+}
+.move-left{
+  margin-left:-0.5rem;
+}
+
+#resume h4,h5{
+  margin:0;
+  padding:0;
+}
+
+#resume p{
+  font-size: 13px;
+}
+
+#resume h5{
+  font-size: 1rem;
+}
+
+#resume h4{
+  font-size: 1.2rem;
+}
+
+.beige-overlay{
+  background-color:#969A98;
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%; 
+  z-index: 5;
+  opacity: 0.7;
+  
+}
+
+#main{
+  position: relative;
+}
