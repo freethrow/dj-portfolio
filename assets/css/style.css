@@ -1225,7 +1225,7 @@ img.lightbox:hover{
 
 
 #contact-data{
-  background-color:#969A98;;  
+    
   padding:2rem;
   border-radius: 0.5rem;
   min-width: 40vw;
@@ -1240,8 +1240,12 @@ img.lightbox:hover{
 }
 
 #contact-data .inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  color:blue;
+  color:white;
   font-weight: 200;
   font-family: "Open Sans", sans-serif;
   
@@ -1313,10 +1317,14 @@ h2.main-title{
 
 #resume h5{
   font-size: 1rem;
+  color:#666;
+  margin-left:-0.8rem;
 }
 
 #resume h4{
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color:#666;
+  margin-bottom: 1rem;
 }
 
 .beige-overlay{
@@ -1333,4 +1341,14 @@ h2.main-title{
 
 #main{
   position: relative;
+}
+
+.biography{
+ 
+
+}
+
+.biography h4,h5{
+  color:#666;
+  font-size: 1rem;
 }
