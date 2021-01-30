@@ -1224,32 +1224,16 @@ img.lightbox:hover{
 }
 
 
-#contact-data{
-    
-  padding:2rem;
-  border-radius: 0.5rem;
-  min-width: 40vw;
-  min-height: 40vh;
-  z-index: 20;
-  position: absolute;
-  left:50%;
-  top:50%;
-  transform: translateX(-50%) translateY(-50%);
-  opacity: 0.8;
 
-}
 
-#contact-data .inner{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  color:white;
-  font-weight: 200;
-  font-family: "Open Sans", sans-serif;
+.contact-container{
+  display:block;
+  background-color:transparent;
+  color:black;
   
-  z-index: 3000;
+  width:100%;
+  height:100%;
+  margin: auto;
 }
 
 #contact-data .inner dt{
@@ -1351,4 +1335,27 @@ h2.main-title{
 .biography h4,h5{
   color:#666;
   font-size: 1rem;
+}
+
+.contact-container h2{
+  font-size: 1.5rem;
+  color:black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.contact-container{
+  padding:0 2rem;
+}
+
+.contact-item{
+  padding:1rem 0;
+
+  margin:1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+a.black-link{
+  color:black;
+
 }
