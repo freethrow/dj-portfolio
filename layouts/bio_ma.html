@@ -15,48 +15,9 @@
 
         <div class="col-lg-6">
           <div class="profileImg">
-            <img src="/assets/img/profile-img.jpg" alt="Dragana Jokic picture" id="roundedPortrait" class="img-fluid" />
+            <img src="/assets/img/profile-img.jpg" alt="" id="roundedPortrait" class="img-fluid" />
           </div>
-          </div><!-- End col lg 6 -->
 
-
-        <div class="col-lg-6">
-                        
-            <h3 data-toggle="collapse" class="bio-title" href="#education" role="button" aria-expanded="false" aria-controls="collapseExample">Obrazovanje</h3>            
-            <div id="education" class="collapse">
-                {{#marked data.fields.education}}{{/marked}}              
-            </div>  
-  
-            <h3 data-toggle="collapse"  class="bio-title" href="#expirience" role="button" aria-expanded="false" aria-controls="collapseExample">Radno iskustvo</h3>            
-            <div id="expirience" class="collapse">
-                {{#marked data.fields.expirience}}{{/marked}}              
-            </div>  
-  
-            <h3 data-toggle="collapse" class="bio-title" href="#painting" role="button" aria-expanded="false" aria-controls="collapseExample">SLikarstvo</h3>            
-            <div id="painting" class="collapse">
-                {{#marked data.fields.painting}}{{/marked}}              
-            </div>  
-  
-            <h3 data-toggle="collapse" class="bio-title" href="#architecture" role="button" aria-expanded="false" aria-controls="collapseExample">Arhitektura</h3>            
-            <div id="architecture" class="collapse">
-                {{#marked data.fields.arhitektura}}{{/marked}}              
-            </div>  
-  
-            <h3 data-toggle="collapse" class="bio-title" href="#awards" role="button" aria-expanded="false" aria-controls="collapseExample">Priznanja i nagrade</h3>            
-            <div id="awards" class="collapse">
-                {{#marked data.fields.awards}}{{/marked}}              
-            </div>            
-          
-            <h3 data-toggle="collapse" class="bio-title" href="#activities" role="button" aria-expanded="false" aria-controls="collapseExample">Ostale aktivnosti</h3>            
-            <div id="activities" class="collapse">
-                {{#marked data.fields.activities}}{{/marked}}              
-            </div> 
-        </div><!-- End col lg 6 -->
-
-        </div><!-- End Row -->
-
-        <div class="row mtop">
-          <div class="col-lg-6">
           <div class="bio-srb">
             <h3 class="main-bio-title">Biografija</h3>
             <p>Dragana Jokić rođena u Beogradu, doktorirala je iz oblasti umetnosti, na Fakultetu primenjenih
@@ -77,11 +38,8 @@
              
             <p>U statusu samostalnog umetnika od 1991.godine, član ULUS-a od 1993.godine. 
               Živi i radi u Beogradu.</p>
-          </div><!-- End Bio Srb -->         
-          
-        </div><!-- End Col6 -->  
-        <div class="col-lg-6">
-                 
+          </div>
+          <hr/>
           <div class="bio-srb">
             <h3 class="main-bio-title">English</h3>
             <p>Dragana Jokic, born in Belgrade, earned a doctoral degree in arts at the School
@@ -106,9 +64,42 @@
               <p>She lives and works in Belgrade.</p>
               
               </p>
-          </div><!-- End Bio srb -->  
+          </div>
+         
+        </div>  
+        <div class="col-lg-6">
+          
+          <h3 data-toggle="collapse" class="bio-title" href="#education" role="button" aria-expanded="false" aria-controls="collapseExample">Obrazovanje</h3>            
+          <div id="education" class="collapse">
+              {{#marked data.fields.education}}{{/marked}}              
+          </div>  
+
+          <h3 data-toggle="collapse"  class="bio-title" href="#expirience" role="button" aria-expanded="false" aria-controls="collapseExample">Radno iskustvo</h3>            
+          <div id="expirience" class="collapse">
+              {{#marked data.fields.expirience}}{{/marked}}              
+          </div>  
+
+          <h3 data-toggle="collapse" class="bio-title" href="#painting" role="button" aria-expanded="false" aria-controls="collapseExample">SLikarstvo</h3>            
+          <div id="painting" class="collapse">
+              {{#marked data.fields.painting}}{{/marked}}              
+          </div>  
+
+          <h3 data-toggle="collapse" class="bio-title" href="#architecture" role="button" aria-expanded="false" aria-controls="collapseExample">Arhitektura</h3>            
+          <div id="architecture" class="collapse">
+              {{#marked data.fields.arhitektura}}{{/marked}}              
+          </div>  
+
+          <h3 data-toggle="collapse" class="bio-title" href="#awards" role="button" aria-expanded="false" aria-controls="collapseExample">Priznanja i nagrade</h3>            
+          <div id="awards" class="collapse">
+              {{#marked data.fields.awards}}{{/marked}}              
+          </div>            
+        
+          <h3 data-toggle="collapse" class="bio-title" href="#activities" role="button" aria-expanded="false" aria-controls="collapseExample">Ostale aktivnosti</h3>            
+          <div id="activities" class="collapse">
+              {{#marked data.fields.activities}}{{/marked}}              
+          </div> 
       
-        </div><!-- End Col6 -->  
+        </div>
       </div><!-- End Row -->
 
     </div><!-- End Container -->

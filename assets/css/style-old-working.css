@@ -1205,31 +1205,12 @@ img.lightbox:hover{
 
 .profileImg{
   display:flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-
-
-}
-
-.mtop{
-  margin-top: 2rem;
-  border-top: dashed 2px solid black;
-}
-
-h3.bio-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 19px;
-  margin-bottom: 0.8rem;
-}
-
-h3.main-bio-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 19px;
-  
 }
 
 .profileImg img{
-  
+  margin-top: 2rem;
 }
 
 .section-title p, ul, li{
@@ -1321,7 +1302,7 @@ h2.main-title{
 #resume h5{
   font-size: 1rem;
   color:#666;
-  
+  margin-left:-0.8rem;
 }
 
 #resume h4{
