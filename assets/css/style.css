@@ -1218,13 +1218,15 @@ img.lightbox:hover{
 
 h3.bio-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 19px;
+  font-size: 15px;
   margin-bottom: 0.8rem;
+  font-weight: 200;
 }
 
 h3.main-bio-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 19px;
+  font-weight: 200;
+  font-size: 15px;
   
 }
 
@@ -1290,7 +1292,7 @@ h3.main-bio-title {
 }
 
 h4.page-title{
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding:0;
 
 }
@@ -1312,6 +1314,11 @@ h2.main-title{
 #resume h4,h5{
   margin:0;
   padding:0;
+  
+}
+
+h5{
+  color:red;
 }
 
 #resume p{
