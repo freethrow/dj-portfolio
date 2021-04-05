@@ -220,11 +220,13 @@ client.getEntries({
 // this is disgusting but Contentful won't let me do it otherwise
 // get all the exhibition types
 client.getEntries({
-    'content_type': 'exhibition'
+    'content_type': 'exhibition',
+    order: 'year'
   })
   .then(function (entries) {
     // console.log(JSON.stringify(entries.items[0]))
     entries.items.forEach(function (entry){
+
         // create a new div for each project and append it
 
         let pageUrl = `/painting/${entry.fields.slug}.html`

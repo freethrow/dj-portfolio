@@ -469,6 +469,11 @@ section {
   margin-bottom: 10px;
 }
 
+
+#roundedPortrait{
+  max-width: 300px;
+  float:left;
+}
 .resume .resume-item h5 {
   font-size: 16px;
   /* background: #e4edf9;*/
