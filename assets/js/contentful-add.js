@@ -1,6 +1,6 @@
 // STAR DOG CHAMPION
 
-
+console.log("AAAAA")
 // setup the Contentful Client
 const client = contentful.createClient({
     space:'qjtsepnj8pkr',
@@ -145,10 +145,11 @@ const createCard = (title,url,bigUrl, mask, pageUrl, target,year)=>{
 
 // get all the projects types for architecture
 client.getEntries({
-    'content_type': 'project'
+    'content_type': 'project',
+    order: 'year'
   })
   .then(function (entries) {
-    // console.log(JSON.stringify(entries.items[0]))
+    console.log(JSON.stringify(entries.items[0]))
     entries.items.forEach(function (entry){
         // create a new div for each project and append it
 
@@ -185,7 +186,8 @@ client.getEntries({
 
 // get all the projects types for architecture
 client.getEntries({
-    'content_type': 'project'
+    'content_type': 'project',
+    order:'year'
   })
   .then(function (entries) {
     /// console.log(JSON.stringify(entries.items[0]))
